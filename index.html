@@ -1,23 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Title</title>
+    <link rel="stylesheet" href="./src/style/index.css" />
+    <link rel="stylesheet" href="./src/style/tomorrow-night-eighties.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Title</title>
-  <link rel="stylesheet" href="./src/style/index.css">
-  <link rel="stylesheet" href="./src/style/tomorrow-night-eighties.css">
-
-</head>
-
-<body>
-  <h2>
-    Practice1
-  </h2>
-  <p>从某后端接口得到如下数据：</p>
-  <pre><code class="lang-javascript">
+  <body>
+    <div></div>
+    <h2>
+      Practice1
+    </h2>
+    <p>从某后端接口得到如下数据：</p>
+    <pre><code class="lang-javascript">
   {
     data: [
       ["Anna", 16, "Female", "2004-12-01"],
@@ -31,31 +32,37 @@
     ]
   }
   </code></pre>
-  <p>data 是数据，column 是对数据的说明。现写一个函数 <code>parseData</code>，将上面的对象转化为期望的数组以供前端展示所使用：</p>
-  <pre><code class="lang-javascript">
+    <p>
+      data 是数据，column 是对数据的说明。现写一个函数
+      <code>parseData</code>，将上面的对象转化为期望的数组以供前端展示所使用：
+    </p>
+    <pre><code class="lang-javascript">
     [
       { name: "Anna", age: 16, gender: "Female", birthday: "2004-12-01" },
       { name: "Kevin", age: 22, gender: "Male", birthday: "1998-01-21" },
     ]
   </code></pre>
-  <p>练习文件 <code>/src/practice1.js</code></p>
-  <hr/>
-  <h2>
-    Practice2
-  </h2>
-  <p>有一个存放字符串数据的数组：</p>
-  <pre><code class="lang-javascript">
+    <p>练习文件 <code>/src/practice1.js</code></p>
+    <hr />
+    <h2>
+      Practice2
+    </h2>
+    <p>有一个存放字符串数据的数组：</p>
+    <pre><code class="lang-javascript">
     ['item1', 'item2', 'item3', 'item4', 'item5']
   </code></pre>
-  <p>有另一个数组存放对象如下：</p>
-  <pre><code class="lang-javascript">
+    <p>有另一个数组存放对象如下：</p>
+    <pre><code class="lang-javascript">
     [
       { content: 'section1', index: 0 },
       { content: 'section2', index: 2 }
     ]
   </code></pre>
-  <p>这个数组表示它每个对象会往原来的数组的 <code>index</code> 坐标前插入 <code>content</code> 数据（<code>index</code> 不会重复）：</p>
-  <pre><code class="lang-javascript">
+    <p>
+      这个数组表示它每个对象会往原来的数组的 <code>index</code> 坐标前插入
+      <code>content</code> 数据（<code>index</code> 不会重复）：
+    </p>
+    <pre><code class="lang-javascript">
          0      1      2      3      4
        item1  itme2  item3  item4  item5
       ^             ^ 
@@ -64,8 +71,8 @@
 
   最后结果是：['section1', 'item1', 'item2', 'section2', 'item3', 'item4', 'item5']
   </code></pre>
-  <p>请你完成 <code>inject</code> 函数，以达到上述的功能：</p>
-  <pre><code class="lang-javascript">
+    <p>请你完成 <code>inject</code> 函数，以达到上述的功能：</p>
+    <pre><code class="lang-javascript">
     inject(
       ['item1', 'item2', 'item3', 'item4', 'item5'],
       [
@@ -74,12 +81,17 @@
       ]
     ) // => ['section1', 'item1', 'item2', 'section2', 'item3', 'item4', 'item5']
   </code></pre>
-  <p>练习文件 <code>/src/practice2.js</code></p>
-  <h3>请尽可能使用课程中和<a href="https://es6.ruanyifeng.com/#docs/let">ES6手册</a>中所学的内容实现上述需求, 并使用 <code>npm run test</code> 命令通过测试</h3>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- <script src="src/practice1.js"></script> -->
-  <!-- <script src="src/practice2.js"></script> -->
-</body>
-
+    <p>练习文件 <code>/src/practice2.js</code></p>
+    <h3>
+      请尽可能使用课程中和<a href="https://es6.ruanyifeng.com/#docs/let"
+        >ES6手册</a
+      >中所学的内容实现上述需求, 并使用 <code>npm run test</code> 命令通过测试
+    </h3>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="src/practice1.js"></script>
+    <!-- <script src="src/practice2.js"></script> -->
+  </body>
 </html>
